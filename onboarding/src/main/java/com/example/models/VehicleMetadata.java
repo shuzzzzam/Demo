@@ -2,10 +2,12 @@ package com.example.models;
 
 public class VehicleMetadata {
     String vehicleCompany;
-    String vehiclModel;
+    String vehicleModel;
+    String colour;
 
-    VehicleMetadata(String vehicleCompany, String vehicleModel) {
+    VehicleMetadata(String vehicleCompany, String vehicleModel, String colour) {
         this.vehicleCompany = vehicleCompany;
-        this.vehiclModel = vehicleModel;
+        this.vehicleModel = vehicleModel;
+        this.colour = colour;
     }
 }
