@@ -22,6 +22,24 @@ public class User {
     
     String firstName;
     String lastName;
+    public String getUser_alias() {
+        return user_alias;
+    }
+    public void setUser_alias(String user_alias) {
+        this.user_alias = user_alias;
+    }
+    public List<Vehicle> getOwnedVehicles() {
+        return ownedVehicles;
+    }
+    public void setOwnedVehicles(List<Vehicle> ownedVehicles) {
+        this.ownedVehicles = ownedVehicles;
+    }
+    public List<UserDocument> getUploadedDocuments() {
+        return uploadedDocuments;
+    }
+    public void setUploadedDocuments(List<UserDocument> uploadedDocuments) {
+        this.uploadedDocuments = uploadedDocuments;
+    }
     String phoneNumber;
 
     @OneToMany(mappedBy = "owner", cascade= CascadeType.ALL)
@@ -82,6 +100,9 @@ public class User {
     		uploadedDocuments.remove(userDocument);
     	//set the player field in the registration
     	userDocument.setUser(null);
+    }
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
 }
