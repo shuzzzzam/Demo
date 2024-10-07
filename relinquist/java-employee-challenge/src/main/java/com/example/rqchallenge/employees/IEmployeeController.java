@@ -13,7 +13,7 @@ import java.util.Map;
 public interface IEmployeeController {
 
     @GetMapping()
-    ResponseEntity<List<Employee>> getAllEmployees() throws IOException;
+    public ResponseEntity<List<Employee>> getAllEmployees() throws IOException;
 
     @GetMapping("/search/{searchString}")
     ResponseEntity<List<Employee>> getEmployeesByNameSearch(@PathVariable String searchString);
