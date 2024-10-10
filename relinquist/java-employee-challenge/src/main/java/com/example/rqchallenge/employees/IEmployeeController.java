@@ -16,10 +16,10 @@ public interface IEmployeeController {
     public ResponseEntity<List<Employee>> getAllEmployees() throws IOException;
 
     @GetMapping("/search/{searchString}")
-    ResponseEntity<List<Employee>> getEmployeesByNameSearch(@PathVariable String searchString);
+    public ResponseEntity<List<Employee>> getEmployeesByNameSearch(@PathVariable String searchString);
 
     @GetMapping("/{id}")
-    ResponseEntity<Employee> getEmployeeById(@PathVariable String id);
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable String id);
 
     @GetMapping("/highestSalary")
     ResponseEntity<Integer> getHighestSalaryOfEmployees();
