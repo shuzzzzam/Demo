@@ -1,20 +1,30 @@
 package com.example.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Employee {
-    private String firstName;
-    private String lastName;
+    @JsonProperty("employee_name")
+    private String name;
+
+    @JsonProperty("employee_age")
     private long age;
-    public String getFirstName() {
-        return firstName;
+
+    @JsonProperty("employee_salary")
+    private String salary;
+
+    public String getSalary() {
+        return salary;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+
+    public void setSalary(String salary) {
+        this.salary = salary;
     }
-    public String getLastName() {
-        return lastName;
+
+    public String getName() {
+        return name;
     }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
     public long getAge() {
         return age;
